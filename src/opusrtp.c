@@ -1107,9 +1107,11 @@ int main(int argc, char *argv[])
       case 'q':
         break;
       case 'o':
+#ifdef HAVE_PCAP
         if (optarg)
             output_file = optarg;
         break;
+#endif
       case 'd':
         if (optarg)
             dest = optarg;
